@@ -12,13 +12,13 @@ The steps can be summarized as follows:
 ## k-fold Cross Validation: ##
 
 Cross-validation is used to estimate the skill of a machine learning model on unseen data. Following steps were followed to perform the cross-validation:
-*Shuffle the dataset randomly
-*Split the dataset into k groups
-*For each group:
-  *Take the group as a test dataset
-	 *Take the remaining groups as a training dataset
-  *Fit the model on the training dataset and then test it on the test dataset
-*Find the evaluation score for the model
+* Shuffle the dataset randomly
+* Split the dataset into k groups
+* For each group:
+  * Take the group as a test dataset
+  * Take the remaining groups as a training dataset
+  * Fit the model on the training dataset and then test it on the test dataset
+* Find the evaluation score for the model
 
 Configuration of the k-parameter is an important step in this validation. The value for k is chosen such that each train/test group of data samples is large enough to be statistically representative of the broader dataset. It has been found through experimentation, that setting the value of k = 10 generally results in a model skill estimate with low bias, a modest variance. This value of k can be adjusted to improve the accuracy of the model.
 The data from the .csv file is read and stored using pandas library. The dataset is then encoded using OneHotEncoder for converting the values in the dataset from number or string to categorical values.
@@ -28,9 +28,9 @@ Weka is a collection of machine learning algorithms for data mining tasks. Weka 
 
 ### Datasets: ###
 Three datasets are available for this comparison:
-*Car dataset
-*Hayes-Roth dataset
-*Breast-cancer dataset
+* Car dataset
+* Hayes-Roth dataset
+* Breast-cancer dataset
  
 ### Conclusion: ###
 The accuracy found using the Weka tool and after building the k-NN model for all the mentioned datasets is almost similar when the values for the specified parameters are same for both the evaluations. The distances used for the evaluation of all the datasets are Euclidean distance, Manhattan distance and Minkowski distance.
